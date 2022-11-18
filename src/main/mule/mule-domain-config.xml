@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain:mule-domain
+        xmlns:http="http://www.mulesoft.org/schema/mule/http"
+        xmlns="http://www.mulesoft.org/schema/mule/core"
+        xmlns:domain="http://www.mulesoft.org/schema/mule/ee/domain"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+               http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+               http://www.mulesoft.org/schema/mule/ee/domain http://www.mulesoft.org/schema/mule/ee/domain/current/mule-domain-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="ExperienceAPIConfig" doc:name="HTTP Listener config" doc:id="6c28d225-f989-4abb-b180-3f00b429ccd5" >
+		<http:listener-connection host="0.0.0.0" port="8092"/>
+	</http:listener-config>
+	<http:listener-config name="ProcessAPIConfig" doc:name="HTTP Listener config" doc:id="2a256e6b-6e26-48f3-8cb0-5c4bc71d805b" >
+		<http:listener-connection host="0.0.0.0" port="8093" />
+	</http:listener-config>
+	<http:listener-config name="SystemAPIConfig" doc:name="HTTP Listener config" doc:id="3cf9e5e5-2682-440c-a261-9e7e9cbaef88" >
+		<http:listener-connection host="0.0.0.0" port="8094" />
+	</http:listener-config>
+	<http:request-config name="ProcessAPIRequest" doc:name="HTTP Request configuration" doc:id="ecd3c06a-dc2d-4b0d-af8a-023bd16b3dfb" >
+		<http:request-connection host="mdc-scgp-uat.scg-wedo.tech" protocol="HTTPS"/>
+	</http:request-config>
+	<http:request-config name="SystemAPIRequest" doc:name="HTTP Request configuration" doc:id="bbefb72d-6578-4792-bdf8-d3c3aa799432" >
+		<http:request-connection host="mdc-scgp-uat.scg-wedo.tech" protocol="HTTPS"/>
+	</http:request-config>
+
+
+    <!-- configure here resource to be shared within the domain -->
+
+</domain:mule-domain>
